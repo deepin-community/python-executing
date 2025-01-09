@@ -1,4 +1,19 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+
+#export DH_VERBOSE = 1
+
+include /usr/share/dpkg/pkg-info.mk
+
+export SETUPTOOLS_SCM_PRETEND_VERSION = $(VERSION_UPSTREAM)
+export PYBUILD_TEST_ARGS="-k \
+not TestStuff \
+and not test_small_samples \
+"
 
 %:
-	dh $@
+	dh $@ --buildsystem=pybuild
+
+override_dh_clean:
+	dh_clean
+	rm -rf .mypy_cache
