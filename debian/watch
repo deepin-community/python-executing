@@ -1,0 +1,9 @@
+version=4
+
+opts="mode=git, \
+      compression=gz, \
+      pgpmode=none, \
+      uversionmangle=s/(\d)[_\.\-\+]?((RC|rc|pre|dev|beta|alpha)\.?\d*)$/$1~$2/, \
+      dversionmangle=s/\+ds(\.?\d+)?$//" \
+https://github.com/alexmojaki/executing.git \
+      refs/tags/@ANY_VERSION@
