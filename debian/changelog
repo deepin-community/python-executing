@@ -1,3 +1,12 @@
+python-executing (2.2.0-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream version 2.2.0
+    (Closes: #1090272)
+  * [a8fe5e8] d/copyright: Update year data
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Thu, 06 Feb 2025 16:39:35 +0200
+
 python-executing (2.1.0-0.1) unstable; urgency=medium
 
   * Non-maintainer upload.
